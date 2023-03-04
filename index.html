@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Calculo para prova final IFBA</title>
+       <link rel="stylesheet" type="text/css" href="estilo.css">
+    
+    <script> 
+    function calcular(oper)
+    {
+    
+    var valor= document.calcform.oper.value;
+    
+    var a = parseFloat(valor);
+    
+    var b= 15-(a+a);
+    var c = b.toFixed(1);
+    document.calcform.res.value = c;
+    alert("Você precisa de: "+c+" pontos na prova final");
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="box" class="blue">
+        
+    <form name="calcform" method="post" action="">
+    <br><br>
+    <FONT size=3>Adicione a sua media do SUAP: </FONT><input type="text" name="oper" id="oper">
+   <br><br> <FONT COLOR="black"> Coloque valores reais utiliando ponto em vez de virgula. </FONT>
+   <br><br>
+  
+   <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/> 
+     
+     <br><br>  Você precisa de : <input type="text" name="res" id="res" /> pontos na prova final.
+   </form>
+  
+
+    </div>
+
+</body>
+</html>
